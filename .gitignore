@@ -7,20 +7,11 @@ venv/
 .venv/
 env/
 
-# Dataset files
+# Full original dataset - not required in GitHub
 DATA/
-test_data.csv
 
-# Trained machine learning models
-model/
-*.pkl
-*.joblib
-
-# Generated results
-RESULTS/
-
-# Streamlit
-.streamlit/
+# Streamlit secrets
+.streamlit/secrets.toml
 
 # IDE / system files
 .vscode/
