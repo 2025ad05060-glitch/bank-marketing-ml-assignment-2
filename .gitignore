@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Dataset files
+DATA/
+test_data.csv
+
+# Trained machine learning models
+model/
+*.pkl
+*.joblib
+
+# Generated results
+RESULTS/
+
+# Streamlit
+.streamlit/
+
+# IDE / system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
