@@ -1,12 +1,19 @@
 # Bank Marketing Classification Using Machine Learning
 
 ## Machine Learning Assignment 2
+## Problem Statement
 
-This project implements and compares multiple machine learning classification algorithms on the UCI Bank Marketing dataset. The objective is to predict whether a bank customer will subscribe to a term deposit.
+The aim of this assignment is to build classification models for predicting
+whether a bank customer will subscribe to a term deposit or not.
 
-A Streamlit web application is also developed to allow users to select a trained machine learning model, upload test data, and view the corresponding prediction and evaluation results.
+For this purpose, I used the Bank Marketing dataset from the UCI Machine
+Learning Repository. I trained and tested five classification models on the
+same dataset and compared their performance using Accuracy, AUC, Precision,
+Recall, F1 Score and MCC.
 
----
+I also developed a Streamlit application where test data can be uploaded and
+the performance of different trained models can be checked interactively.
+
 
 ## Dataset
 
@@ -27,7 +34,7 @@ It indicates whether the customer subscribed to a term deposit.
 
 The `duration` attribute was removed during data preparation.
 
----
+
 
 ## Data Preprocessing
 
@@ -49,7 +56,7 @@ After preprocessing:
 - Number of original input features: 15
 - Number of processed features: 50
 
----
+
 
 ## Machine Learning Models
 
@@ -61,7 +68,7 @@ Five classification algorithms were implemented:
 4. Gaussian Naive Bayes
 5. Random Forest Classifier
 
----
+
 
 ## Evaluation Metrics
 
@@ -76,7 +83,7 @@ The models were evaluated using the following six metrics:
 
 Confusion matrices and classification reports were also generated.
 
----
+
 
 ## Model Performance Comparison
 
@@ -88,13 +95,13 @@ Confusion matrices and classification reports were also generated.
 | Gaussian Naive Bayes | 0.845184 | 0.751441 | 0.370846 | 0.464083 | 0.412259 | 0.327093 |
 | Random Forest | 0.895389 | 0.788788 | 0.637255 | 0.245747 | 0.354707 | 0.351844 |
 
----
+
 
 ## Observations
 
-The Random Forest Classifier achieved the highest overall Accuracy, AUC and MCC score among the five evaluated models.
+From the results, Random Forest gave the best overall performance among the five models. It achieved the highest Accuracy, AUC and MCC score.
 
-Random Forest achieved:
+The Random Forest results were:
 
 - Accuracy: 0.895389
 - AUC: 0.788788
@@ -103,11 +110,11 @@ Random Forest achieved:
 - F1 Score: 0.354707
 - MCC Score: 0.351844
 
-Gaussian Naive Bayes achieved the highest Recall and F1 Score among the evaluated models.
+However, Gaussian Naive Bayes gave better Recall and F1 Score compared to the other models. This shows that the best model can depend on which evaluation metric is considered.
 
-Therefore, there is no single model that dominates every evaluation metric. Random Forest provides the strongest overall performance according to Accuracy, AUC and MCC, whereas Gaussian Naive Bayes detects a larger proportion of the positive class, as indicated by its higher Recall.
+Overall, Random Forest performed better when Accuracy, AUC and MCC are considered together.
 
----
+
 
 ## Streamlit Web Application
 
@@ -124,7 +131,7 @@ The application allows the user to:
 - View the classification report.
 - View individual prediction results and subscription probabilities.
 
----
+
 
 ## Project Structure
 
@@ -149,11 +156,26 @@ The `model` folder contains:
 - `naive_bayes.pkl`
 - `random_forest.pkl`
 
----
 
 ## How to Run the Application
 
-### 1. Install the required libraries
+### Step 1: Install the required libraries
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Step 2: Run the Streamlit application
+
+After installing the required libraries, run:
+
+```bash
+streamlit run app.py
+```
+
+The application will open in the web browser.
+
+## Deployment
+
+The application was also deployed using Streamlit Community Cloud. The deployed application can be used to
+select any of the five trained models, upload the test dataset and view the prediction and evaluation results.
