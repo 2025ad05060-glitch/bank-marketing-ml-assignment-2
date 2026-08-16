@@ -148,7 +148,7 @@ ML_ASSIGNMENT_2/
 ### Saved Model Files
 
 The `model` folder contains:
-
+- `01_data_preparation.py` - Python source code for data preprocessing and training all five classification models
 - `preprocessor.pkl`
 - `logistic_regression.pkl`
 - `decision_tree.pkl`
